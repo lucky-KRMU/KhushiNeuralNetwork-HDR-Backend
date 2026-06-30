@@ -127,16 +127,7 @@ class Network:
         
         self.epoch_range = [x+1 for x in range(epochs)]
         
-        # Actual Saving the graph
-        plt.style.use("dark_background")
-        plt.plot(self.epoch_range, self.accuracy_percentage, marker='o', color='cyan', linewidth=3, markersize=8, label='Accuracy')
-        plt.xlabel("epochs")
-        plt.ylabel("accuracy (%)")
-        plt.title("KNN - MNIST Training Accuracy", color="red", fontsize=18)
-        plt.grid(True, linestyle=":")
-        plt.legend()
-        plt.savefig("graphs/accuracy.png")
-        plt.show()
+       
                     
     def predict(self, x):
         output = self.feedforward(x)
